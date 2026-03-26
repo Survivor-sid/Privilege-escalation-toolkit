@@ -74,35 +74,52 @@ exploitation.
 
 ## Architecture
 
-System Information ↓ Privilege Escalation Scanning Modules ↓ Risk
-Classification Engine ↓ Report Generation ↓ TXT + JSON Output
+![Architecture Diagram](architecture.png)
 
 ------------------------------------------------------------------------
 
 ## Project Structure
 
-priv-esc-toolkit/ │ ├── main.py ├── requirements.txt │ ├── core/ │ ├──
-risk_engine.py │ └── report_writer.py │ ├── modules/ │ ├──
-system_info.py │ ├── suid_scan.py │ ├── capabilities_scan.py │ ├──
-permissions_scan.py │ ├── cron_scan.py │ ├── sudo_scan.py │ ├──
-service_scan.py │ └── kernel_scan.py │ └── reports/ ├── report.txt └──
-report.json
-
+```bash
+priv-esc-toolkit/
+│
+├── main.py
+├── requirements.txt
+│
+├── core/
+│   ├── risk_engine.py
+│   └── report_writer.py
+│
+├── modules/
+│   ├── system_info.py
+│   ├── suid_scan.py
+│   ├── capabilities_scan.py
+│   ├── permissions_scan.py
+│   ├── cron_scan.py
+│   ├── sudo_scan.py
+│   ├── service_scan.py
+│   └── kernel_scan.py
+│
+└── reports/
+    ├── report.txt
+    └── report.json
+```
 ------------------------------------------------------------------------
 
 ## Installation
+```bash
+git clone https://github.com/Survivor-sid/Privilege-escalation-toolkit.git
 
-git clone https://github.com/yourusername/priv-esc-toolkit.git cd
-priv-esc-toolkit
+cd priv-esc-toolkit
 
 pip install -r requirements.txt
-
+```
 ------------------------------------------------------------------------
 
 ## Usage
-
+```bash
 python main.py
-
+```
 Reports are generated automatically in:
 
 reports/report.txt reports/report.json
@@ -140,17 +157,3 @@ This tool is intended for:
 Do not use this tool on systems without explicit permission.
 
 ------------------------------------------------------------------------
-
-## References
-
-GTFOBins -- https://gtfobins.github.io\
-NVD -- https://nvd.nist.gov\
-Exploit-DB -- https://www.exploit-db.com\
-Python Docs -- https://docs.python.org/3
-
-------------------------------------------------------------------------
-
-## Author
-
-Linux Privilege Escalation Automation Toolkit\
-Python 3 • Kali Linux • Metasploitable 2
