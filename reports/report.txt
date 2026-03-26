@@ -1,0 +1,238 @@
+
+============================================================
+MODULE: System Info
+SEVERITY: LOW
+MITIGATION: Review configuration
+
+
+User: kali
+
+ID:
+uid=0(root) gid=0(root) groups=0(root)
+
+Kernel:
+Linux kali 6.17.10+kali-amd64 #1 SMP PREEMPT_DYNAMIC Kali 6.17.10-1kali1 (2025-12-08) x86_64 GNU/Linux
+
+OS:
+PRETTY_NAME="Kali GNU/Linux Rolling"
+NAME="Kali GNU/Linux"
+VERSION_ID="2025.4"
+VERSION="2025.4"
+VERSION_CODENAME=kali-rolling
+ID=kali
+ID_LIKE=debian
+HOME_URL="https://www.kali.org/"
+SUPPORT_URL="https://forums.kali.org/"
+BUG_REPORT_URL="https://bugs.kali.org/"
+ANSI_COLOR="1;31"
+
+
+============================================================
+MODULE: SUID Binaries
+SEVERITY: HIGH
+MITIGATION: Remove SUID bit or restrict execution
+
+/var/lib/docker/overlay2/6d3f42b5af9860fa3da72d1323fefeee005e63796affac945ebf516a4f747bc2/diff/usr/bin/gpasswd
+/var/lib/docker/overlay2/6d3f42b5af9860fa3da72d1323fefeee005e63796affac945ebf516a4f747bc2/diff/usr/bin/passwd
+/var/lib/docker/overlay2/6d3f42b5af9860fa3da72d1323fefeee005e63796affac945ebf516a4f747bc2/diff/usr/bin/mount
+/var/lib/docker/overlay2/6d3f42b5af9860fa3da72d1323fefeee005e63796affac945ebf516a4f747bc2/diff/usr/bin/chsh
+/var/lib/docker/overlay2/6d3f42b5af9860fa3da72d1323fefeee005e63796affac945ebf516a4f747bc2/diff/usr/bin/umount
+/var/lib/docker/overlay2/6d3f42b5af9860fa3da72d1323fefeee005e63796affac945ebf516a4f747bc2/diff/usr/bin/su
+/var/lib/docker/overlay2/6d3f42b5af9860fa3da72d1323fefeee005e63796affac945ebf516a4f747bc2/diff/usr/bin/chfn
+/var/lib/docker/overlay2/6d3f42b5af9860fa3da72d1323fefeee005e63796affac945ebf516a4f747bc2/diff/usr/bin/newgrp
+/usr/share/kiro/chrome-sandbox
+/usr/share/code/chrome-sandbox
+/usr/sbin/pppd
+/usr/sbin/mount.nfs
+/usr/sbin/vmware-authd
+/usr/sbin/mount.cifs
+/usr/bin/sudo
+/usr/bin/gpasswd
+/usr/bin/kismet_cap_nrf_52840
+/usr/bin/fusermount3
+/usr/bin/passwd
+/usr/bin/kismet_cap_ubertooth_one
+/usr/bin/kismet_cap_ti_cc_2540
+/usr/bin/mount
+/usr/bin/chsh
+/usr/bin/kismet_cap_nxp_kw41z
+/usr/bin/umount
+/usr/bin/kismet_cap_rz_killerbee
+/usr/bin/kismet_cap_hak5_wifi_coconut
+/usr/bin/ntfs-3g
+/usr/bin/su
+/usr/bin/inetutils-traceroute
+/usr/bin/chfn
+/usr/bin/newgrp
+/usr/bin/rsh-redone-rlogin
+/usr/bin/kismet_cap_linux_bluetooth
+/usr/bin/rsh-redone-rsh
+/usr/bin/kismet_cap_nrf_51822
+/usr/bin/kismet_cap_nrf_mousejack
+/usr/bin/kismet_cap_linux_wifi
+/usr/bin/pkexec
+/usr/bin/kismet_cap_ti_cc_2531
+/usr/lib/mysql/plugin/auth_pam_tool_dir/auth_pam_tool
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/virtualbox/VBoxNetAdpCtl
+/usr/lib/virtualbox/VBoxSDL
+/usr/lib/virtualbox/VirtualBoxVM
+/usr/lib/virtualbox/VBoxNetNAT
+/usr/lib/virtualbox/VBoxHeadless
+/usr/lib/virtualbox/VBoxNetDHCP
+/usr/lib/vmware/bin/vmware-vmx-stats
+/usr/lib/vmware/bin/vmware-vmx-debug
+/usr/lib/vmware/bin/vmware-vmx
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/lib/chromium/chrome-sandbox
+/usr/lib/openssh/ssh-keysign
+/usr/lib/xorg/Xorg.wrap
+/usr/lib/mongodb-compass/chrome-sandbox
+/opt/google/chrome/chrome-sandbox
+
+============================================================
+MODULE: Linux Capabilities
+SEVERITY: LOW
+MITIGATION: Review configuration
+
+/usr/bin/dumpcap cap_net_admin,cap_net_raw=eip
+/usr/bin/fping cap_net_raw=ep
+/usr/lib/x86_64-linux-gnu/gstreamer1.0/gstreamer-1.0/gst-ptp-helper cap_net_bind_service,cap_net_admin,cap_sys_nice=ep
+/usr/lib/nmap/nmap cap_net_bind_service,cap_net_admin,cap_net_raw=eip
+
+============================================================
+MODULE: World Writable Files
+SEVERITY: LOW
+MITIGATION: Review configuration
+
+/home/kali/Downloads/Compiled-1688545393558.Compiled
+/proc
+/sys/kernel/security/apparmor/.remove
+/sys/kernel/security/apparmor/.replace
+/sys/kernel/security/apparmor/.load
+/sys/kernel/security/apparmor/.access
+/sys/kernel/security/tomoyo/self_domain
+/opt/lampp/htdocs/sangram-cane/uploads/.htaccess
+
+============================================================
+MODULE: Cron Jobs
+SEVERITY: LOW
+MITIGATION: Review configuration
+
+-rw-r--r-- 1 root root 1042 Feb  5  2025 /etc/crontab
+
+/etc/cron.d:
+total 36
+drwxr-xr-x   2 root root  4096 Jan  4 11:37 .
+drwxr-xr-x 213 root root 12288 Mar 25 09:19 ..
+-rw-r--r--   1 root root   188 Jan  1  2025 e2scrub_all
+-rw-r--r--   1 root root   607 Sep 18  2024 john
+-rw-r--r--   1 root root   712 Dec  4  2024 php
+-rw-r--r--   1 root root   102 Feb  5  2025 .placeholder
+-rw-r--r--   1 root root   400 Jan 16  2024 sysstat
+
+/etc/cron.daily:
+total 48
+drwxr-xr-x   2 root root  4096 Mar  8 18:32 .
+drwxr-xr-x 213 root root 12288 Mar 25 09:19 ..
+-rwxr-xr-x   1 root root   539 Jan 24  2025 apache2
+-rwxr-xr-x   1 root root  1478 Feb 19  2025 apt-compat
+-rwxr-xr-x   1 root root   123 Feb 14  2025 dpkg
+lrwxrwxrwx   1 root root    37 Mar  3 04:30 google-chrome -> /opt/google/chrome/cron/google-chrome
+-rwxr-xr-x   1 root root   377 Jul 14  2024 logrotate
+-rwxr-xr-x   1 root root  1395 Aug 29  2024 man-db
+-rw-r--r--   1 root root   102 Feb  5  2025 .placeholder
+-rwxr-xr-x   1 root root   652 Dec  7  2020 plocate
+-rwxr-xr-x   1 root root   526 Jan 16  2024 sysstat
+
+/etc/cron.hourly:
+total 20
+drwxr-xr-x   2 root root  4096 Jan  4 11:37 .
+drwxr-xr-x 213 root root 12288 Mar 25 09:19 ..
+-rw-r--r--   1 root root   102 Feb  5  2025 .placeholder
+
+/etc/cron.monthly:
+total 20
+drwxr-xr-x   2 root root  4096 Jan  4 11:37 .
+drwxr-xr-x 213 root root 12288 Mar 25 09:19 ..
+-rw-r--r--   1 root root   102 Feb  5  2025 .placeholder
+
+/etc/cron.weekly:
+total 24
+drwxr-xr-x   2 root root  4096 Jan  4 11:37 .
+drwxr-xr-x 213 root root 12288 Mar 25 09:19 ..
+-rwxr-xr-x   1 root root  1055 Aug 29  2024 man-db
+-rw-r--r--   1 root root   102 Feb  5  2025 .placeholder
+
+/etc/cron.yearly:
+total 20
+drwxr-xr-x   2 root root  4096 Jan  4 11:37 .
+drwxr-xr-x 213 root root 12288 Mar 25 09:19 ..
+-rw-r--r--   1 root root   102 Feb  5  2025 .placeholder
+
+============================================================
+MODULE: Sudo Permissions
+SEVERITY: LOW
+MITIGATION: Review configuration
+
+Matching Defaults entries for root on kali:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin, use_pty
+
+User root may run the following commands on kali:
+    (ALL : ALL) ALL
+
+============================================================
+MODULE: Running Services
+SEVERITY: HIGH
+MITIGATION: Remove SUID bit or restrict execution
+
+  UNIT                      LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service   loaded active running Accounts Service
+  bluetooth.service         loaded active running Bluetooth service
+  colord.service            loaded active running Manage, Install and Generate Color Profiles
+  containerd.service        loaded active running containerd container runtime
+  cron.service              loaded active running Regular background program processing daemon
+  dbus.service              loaded active running D-Bus System Message Bus
+  docker.service            loaded active running Docker Application Container Engine
+  getty@tty1.service        loaded active running Getty on tty1
+  haveged.service           loaded active running Entropy Daemon based on the HAVEGE algorithm
+  iio-sensor-proxy.service  loaded active running IIO Sensor Proxy service
+  lightdm.service           loaded active running Light Display Manager
+  ModemManager.service      loaded active running Modem Manager
+  NetworkManager.service    loaded active running Network Manager
+  pcscd.service             loaded active running PC/SC Smart Card Daemon
+  polkit.service            loaded active running Authorization Manager
+  rtkit-daemon.service      loaded active running RealtimeKit Scheduling Policy Service
+  smartmontools.service     loaded active running Self Monitoring and Reporting Technology (SMART) Daemon
+  ssh.service               loaded active running OpenBSD Secure Shell server
+  systemd-journald.service  loaded active running Journal Service
+  systemd-logind.service    loaded active running User Login Management
+  systemd-oomd.service      loaded active running Userspace Out-Of-Memory (OOM) Killer
+  systemd-timesyncd.service loaded active running Network Time Synchronization
+  systemd-udevd.service     loaded active running Rule-based Manager for Device Events and Files
+  systemd-userdbd.service   loaded active running User Database Manager
+  tuned-ppd.service         loaded active running PPD-to-TuneD API Translation Daemon
+  tuned.service             loaded active running Dynamic System Tuning Daemon
+  udisks2.service           loaded active running Disk Manager
+  upower.service            loaded active running Daemon for power management
+  user@1000.service         loaded active running User Manager for UID 1000
+  wpa_supplicant.service    loaded active running WPA supplicant
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+30 loaded units listed.
+
+============================================================
+MODULE: Kernel Version
+SEVERITY: LOW
+MITIGATION: Review configuration
+
+
+Kernel Version:
+6.17.10+kali-amd64
+
+Check:
+https://www.exploit-db.com
+
