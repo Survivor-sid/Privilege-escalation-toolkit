@@ -27,7 +27,7 @@ def banner():
 
 def run_step(step_name, func):
 
-    print(Fore.BLUE + f"[+] Running {step_name} scan...")
+    print(Fore.CYAN + Style.BRIGHT + f"[+] Running {step_name} scan...")
 
     start = time.time()
 
@@ -36,7 +36,7 @@ def run_step(step_name, func):
     end = time.time()
 
     print(
-        Fore.GREEN
+        Fore.GREEN + Style.Bright
         + f"[✔] {step_name} completed in {round(end-start,2)}s\n"
     )
 
@@ -57,11 +57,11 @@ results.append(run_step("Services", service_scan.run))
 results.append(run_step("Kernel", kernel_scan.run))
 
 
-print(Fore.YELLOW + "[+] Generating report...\n")
+print(Fore.YELLOW + Style.BRIGHT + "[+] Generating report...\n")
 
 write_report(results)
 
-print(Fore.GREEN + "[✔] Report generation complete")
+print(Fore.GREEN + "\n[✔] Report generation complete")
 print(Fore.GREEN + "[✔] Report is saved at: reports/report.txt created")
 print(Fore.GREEN + "[✔] reports/report.json created\n")
 
