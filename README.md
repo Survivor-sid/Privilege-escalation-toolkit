@@ -118,7 +118,7 @@ pip install -r requirements.txt
 
 ## Usage
 ```bash
-python main.py
+sudo python main.py
 ```
 Reports are generated automatically in:
 
