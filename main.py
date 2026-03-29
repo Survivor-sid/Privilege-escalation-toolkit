@@ -16,13 +16,14 @@ init(autoreset=True)
 
 
 def banner():
-
-    print(Fore.CYAN + Style.BRIGHT + """
-=========================================
+    print(
+        Fore.CYAN + Style.BRIGHT +
+        """
+=====================================
  Linux Privilege Escalation Toolkit
- Automated Security Enumeration Scanner
-=========================================
-""")
+=====================================
+        """
+    )
 
 
 def run_step(step_name, func):
@@ -36,13 +37,14 @@ def run_step(step_name, func):
     end = time.time()
 
     print(
-        Fore.GREEN + Style.Bright
+        Fore.GREEN + Style.BRIGHT
         + f"[✔] {step_name} completed in {round(end-start,2)}s\n"
     )
 
     return result
 
 
+# show banner
 banner()
 
 results = []
@@ -57,12 +59,12 @@ results.append(run_step("Services", service_scan.run))
 results.append(run_step("Kernel", kernel_scan.run))
 
 
-print(Fore.YELLOW + Style.BRIGHT + "[+] Generating report...\n")
+print(Fore.YELLOW + "[+] Generating report...\n")
 
 write_report(results)
 
 print(Fore.GREEN + "\n[✔] Report generation complete")
-print(Fore.GREEN + "[✔] Report is saved at: reports/report.txt created")
+print(Fore.GREEN + "[✔] reports/report.txt created")
 print(Fore.GREEN + "[✔] reports/report.json created\n")
 
 print(
